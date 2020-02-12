@@ -71,7 +71,7 @@ stage('Jfrog Artifacory Upload') {
 def project_terra="04-Terraform/03-Ansible-Deploy/ansible/04-Tomcat"
 dir(project_terra) {
    stage('Prod Deployment on AWS'){
-   sh label: 'terraform', script: 'ansible-playbook -i /root/.jenkins/workspace/petclinic-branches_master/04-Terraform/03-Ansible-Deploy/jenkins-ci.ini -u ubuntu --key /root/.ssh/mykey.pem web-playbook.yaml'
+   sh label: 'terraform', script: 'ansible-playbook -i /root/.jenkins/workspace/petclinic-branches_Terraform/04-Terraform/03-Ansible-Deploy/jenkins-ci.ini -u ubuntu --key /root/.ssh/mykey.pem web-playbook.yaml'
    }
 }
 
